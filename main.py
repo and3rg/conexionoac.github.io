@@ -17,7 +17,7 @@ station = network.WLAN(network.STA_IF)
 station.active(True)
 station.connect(ssid, password)
 
-while station.isconnected() == False:
+while not station.isconnected():
     pass
 
 print('Conexion correcta')
@@ -37,7 +37,12 @@ def leer_sensor():
 def cargar_html():
     try:
         with open('index.html', 'r') as file:
-            return file.read()
+            html_content = file.read()
+            # Concatenar las variables en el HTML
+            html_content = html_content.replace('{{temp}}', str(temp))
+            html_content = html_content.replace('{{hum}}', str(hum))
+            html_content = html_content.replace('{{pres}}', str(pres))
+            return html_content
     except Exception as e:
         print("Error al cargar el archivo HTML:", str(e))
         return ""

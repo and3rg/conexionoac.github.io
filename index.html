@@ -2,8 +2,12 @@
 <head>
   <meta http-equiv=\"refresh\" content=\"10\">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <style>
+ <!-- Cambia estas líneas en tu código HTML -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<!-- a algo como esto -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     html {
      font-family: Arial;
      display: inline-block;
@@ -25,17 +29,17 @@
   <p>
     <i class="fas fa-thermometer-half" style="color:#059e8a;"></i> 
     <span class="bme-labels">Temperatura:</span> 
-    <span>"""+str(temp)+"""</span>
+    <span>{{temp}}</span>
   </p>
   <p>
     <i class="fas fa-tint" style="color:#00add6;"></i> 
     <span class="bme-labels">Humedad:</span>
-    <span>"""+str(hum)+"""</span>
+    <span>{{hum}}</span>
   </p>
   <p>
     <i class="fas fa-tachometer-alt"></i>
-    <span class="bme-labels">Presi&oacute;n:</span>
-    <span>"""+str(pres)+"""</span>
+    <span class="bme-labels">Presión:</span>
+    <span>{{pres}}</span>
   </p>
 </body>
 </html>
